@@ -10,7 +10,8 @@ class Snap_KataTests: XCTestCase {
   }
 
   func testCreateSnapGame() {
-    XCTAssertNotNil(snap)
+    snap?.startGame()
+    XCTAssertEqual(snap?.gameCards!.count, 52)
   }
   
   func testShuffledBoard() {
