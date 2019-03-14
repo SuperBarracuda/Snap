@@ -1,6 +1,12 @@
 class Snap {
-    
-    
-    required init() {
-    }
+  
+  let deck = Deck()
+  
+  required init() {
+  }
+  
+  func shuffledCards() -> [String] {
+    return deck.fullDeck().shuffled()
+  }
+  
 }

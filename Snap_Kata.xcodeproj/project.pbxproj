@@ -88,8 +88,8 @@
 		6A44A659223AEDA9006D5832 /* Snap_KataTests */ = {
 			isa = PBXGroup;
 			children = (
-				6A44A65A223AEDA9006D5832 /* Snap_KataTests.swift */,
 				6A44A65C223AEDA9006D5832 /* Info.plist */,
+				6A44A65A223AEDA9006D5832 /* Snap_KataTests.swift */,
 				6A44A66A223AF099006D5832 /* Deck_Tests.swift */,
 			);
 			path = Snap_KataTests;
