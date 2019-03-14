@@ -8,5 +8,8 @@ class Deck {
     return "🃁 🃂 🃃 🃄 🃅 🃆 🃇 🃈 🃉 🃊 🃋 🃍 🃎".components(separatedBy: " ")
   }
   
+  func heartsCards() -> [String] {
+    return "🂱 🂲 🂳 🂴 🂵 🂶 🂷 🂸 🂹 🂺 🂻 🂽 🃎".components(separatedBy: " ")
+  }
   
 }

@@ -22,5 +22,10 @@ class Deck_Tests: XCTestCase {
     XCTAssertEqual(deck.diamondsCards(), expectedDeck)
   }
   
+  func testHeartsCards() {
+    let expectedDeck = ["🂱","🂲","🂳","🂴","🂵","🂶","🂷","🂸","🂹","🂺","🂻","🂽","🃎"]
+    XCTAssertEqual(deck.heartsCards(), expectedDeck)
+  }
+  
 
 }
