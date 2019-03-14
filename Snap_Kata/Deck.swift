@@ -12,4 +12,8 @@ class Deck {
     return "🂱 🂲 🂳 🂴 🂵 🂶 🂷 🂸 🂹 🂺 🂻 🂽 🃎".components(separatedBy: " ")
   }
   
+  func spadesCards() -> [String] {
+    return "🂡 🂢 🂣 🂤 🂥 🂦 🂧 🂨 🂩 🂪 🂫 🂭 🂮".components(separatedBy: " ")
+  }
+  
 }
