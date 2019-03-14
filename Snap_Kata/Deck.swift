@@ -16,4 +16,13 @@ class Deck {
     return "🂡 🂢 🂣 🂤 🂥 🂦 🂧 🂨 🂩 🂪 🂫 🂭 🂮".components(separatedBy: " ")
   }
   
+  func fullDeck() -> [String] {
+    var fullset = [String]()
+    fullset.append(contentsOf: clubCards())
+    fullset.append(contentsOf: diamondsCards())
+    fullset.append(contentsOf: heartsCards())
+    fullset.append(contentsOf: spadesCards())
+    return fullset
+  }
+  
 }

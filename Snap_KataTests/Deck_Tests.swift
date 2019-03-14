@@ -32,5 +32,8 @@ class Deck_Tests: XCTestCase {
     XCTAssertEqual(deck.spadesCards(), expectedDeck)
   }
   
-
+  func testFullDeck() {
+    XCTAssertEqual(deck.fullDeck().count, 52)
+  }
+  
 }
