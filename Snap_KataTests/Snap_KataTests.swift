@@ -27,5 +27,14 @@ class Snap_KataTests: XCTestCase {
     let card = snap?.dealCard()
     XCTAssertTrue(fullDeck.contains(card!))
   }
+  
+  func testCardsAreRemovedOnceDealt() {
+    snap?.startGame()
+    
+    _ = snap?.dealCard()
+    XCTAssertEqual(snap?.gameCards.count, 51)
+    _ = snap?.dealCard()
+    XCTAssertEqual(snap?.gameCards.count, 50)
+  }
 
 }
