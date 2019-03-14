@@ -1,10 +1,9 @@
 class Snap {
   
   let deck = Deck()
-  var gameCards: [String]?
+  var gameCards: [String] = [String]()
   
   required init() {
-    self.gameCards = [String]()
   }
   
   func startGame() {
@@ -13,6 +12,13 @@ class Snap {
   
   func shuffledCards() -> [String] {
     return deck.fullDeck().shuffled()
+  }
+  
+  func dealCard() -> String {
+    if !gameCards.isEmpty {
+      return gameCards.removeFirst()
+    }
+    return ""
   }
   
 }
