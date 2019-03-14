@@ -1,0 +1,6 @@
+class Snap {
+    
+    
+    required init() {
+    }
+}
