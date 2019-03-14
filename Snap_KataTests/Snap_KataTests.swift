@@ -36,5 +36,13 @@ class Snap_KataTests: XCTestCase {
     _ = snap?.dealCard()
     XCTAssertEqual(snap?.gameCards.count, 50)
   }
+  
+  func testNoMoreCardsAreDealtWhenDeckIsEmpty() {
+    snap?.startGame()
+    for _ in 1...52 {
+      _ = snap?.dealCard()
+    }
+    XCTAssertEqual(snap?.dealCard(), "")
+  }
 
 }
