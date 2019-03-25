@@ -1,8 +1,8 @@
-public class GameStatusOutputter {
+open class GameStatusOutputter {
   
   public init() {}
 
-  public func printStatus(_ status: String) {
+  open func printStatus(_ status: String) {
     print(status)
   }
   
