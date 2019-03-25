@@ -2,8 +2,10 @@ class Snap {
   
   let deck = Deck()
   var gameCards: [String] = [String]()
+  var gameStatus: GameStatusOutputter?
   
-  required init() {
+  required init(gameOutput: GameStatusOutputter) {
+    self.gameStatus = gameOutput
   }
   
   func startGame() {

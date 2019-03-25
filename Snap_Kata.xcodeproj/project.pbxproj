@@ -13,6 +13,7 @@
 		6A44A667223AEEBC006D5832 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A44A666223AEEBC006D5832 /* Snap.swift */; };
 		6A44A669223AF057006D5832 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A44A668223AF057006D5832 /* Deck.swift */; };
 		6A44A66B223AF099006D5832 /* Deck_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A44A66A223AF099006D5832 /* Deck_Tests.swift */; };
+		6A945615223C04E70052D4DF /* GameStatusOutputter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A945614223C04E70052D4DF /* GameStatusOutputter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		6A44A666223AEEBC006D5832 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 		6A44A668223AF057006D5832 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		6A44A66A223AF099006D5832 /* Deck_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck_Tests.swift; sourceTree = "<group>"; };
+		6A945614223C04E70052D4DF /* GameStatusOutputter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatusOutputter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				6A44A650223AEDA9006D5832 /* Info.plist */,
 				6A44A666223AEEBC006D5832 /* Snap.swift */,
 				6A44A668223AF057006D5832 /* Deck.swift */,
+				6A945614223C04E70052D4DF /* GameStatusOutputter.swift */,
 			);
 			path = Snap_Kata;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A945615223C04E70052D4DF /* GameStatusOutputter.swift in Sources */,
 				6A44A669223AF057006D5832 /* Deck.swift in Sources */,
 				6A44A667223AEEBC006D5832 /* Snap.swift in Sources */,
 			);
