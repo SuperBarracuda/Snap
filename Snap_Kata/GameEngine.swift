@@ -1,4 +1,4 @@
-class GameEngine {
+public class GameEngine {
   
   var player1Cards : [String]?
   var player2Cards : [String]?

@@ -1,4 +1,4 @@
-class Snap {
+public class Snap {
   
   let deck = Deck()
   var gameCards: [String] = [String]()
@@ -6,13 +6,13 @@ class Snap {
   
   public var gameEngine: GameEngine?
   
-  required init(gameOutput: GameStatusOutputter) {
+  public required init(gameOutput: GameStatusOutputter) {
     self.gameStatus = gameOutput
     self.gameEngine = GameEngine()
     self.gameCards = shuffledCards()
   }
   
-  func startGame() {
+  public func startGame() {
     player1Turn()
     player2Turn()
   }
