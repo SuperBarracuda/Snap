@@ -1,12 +1,18 @@
 import XCTest
 @testable import Snap_Kata
 
+
+class FakeGameStatusOutputter : GameStatusOutputter {
+  
+}
+
 class Snap_KataTests: XCTestCase {
   
   var snap : Snap?
+  var gameStatusOutputter : FakeGameStatusOutputter?
   
   override func setUp() {
-    snap = Snap()
+    snap = Snap(gameOutput: FakeGameStatusOutputter())
   }
 
   func testCreateSnapGame() {
