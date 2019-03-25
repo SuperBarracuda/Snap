@@ -1,7 +1,6 @@
 import XCTest
 @testable import Snap_Kata
 
-
 class FakeGameStatusOutputter : GameStatusOutputter {
   
   var gameStatues : [String] = [String]()
@@ -54,9 +53,9 @@ class Snap_KataTests: XCTestCase {
   }
   
   func testFirstPlayerStarts() {
-    snap?.startGame()
     let gameStatus = fakeGameStatusOutputter?.gameStatues.first
     XCTAssertTrue((gameStatus?.contains("Player 1 draws"))!)
+    XCTAssertEqual(snap?.gameEngine?.player1Cards?.count, 1)
   }
   
   func testSecondPlayerFollowsFirst() {
@@ -73,9 +72,7 @@ class Snap_KataTests: XCTestCase {
     let gameStatus = fakeGameStatusOutputter?.gameStatues[0]
     let gameStatusCard = gameStatus?.components(separatedBy: "Player 1 draws ")[1]
     let allCards = Deck().fullDeck()
-    
     XCTAssertTrue(allCards.contains(gameStatusCard!))
-
   }
   
   /*

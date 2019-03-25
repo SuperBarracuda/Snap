@@ -4,13 +4,18 @@ class Snap {
   var gameCards: [String] = [String]()
   var gameStatus: GameStatusOutputter?
   
+  public var gameEngine: GameEngine?
+  
   required init(gameOutput: GameStatusOutputter) {
     self.gameStatus = gameOutput
+    self.gameEngine = GameEngine()
     self.gameCards = shuffledCards()
   }
   
   func startGame() {
-    gameStatus?.printStatus("Player 1 draws " + dealCard())
+    let dealtCard = dealCard()
+    gameEngine?.player1Cards?.append(dealtCard)
+    gameStatus?.printStatus("Player 1 draws " + dealtCard)
     gameStatus?.printStatus("Player 2 draws")
   }
   
