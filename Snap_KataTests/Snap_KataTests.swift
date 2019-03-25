@@ -20,11 +20,7 @@ class Snap_KataTests: XCTestCase {
   override func setUp() {
     fakeGameStatusOutputter = FakeGameStatusOutputter()
     snap = Snap(gameOutput: fakeGameStatusOutputter!)
-  }
-
-  func testCreateSnapGame() {
     snap?.startGame()
-    XCTAssertEqual(snap?.gameCards.count, 52)
   }
   
   func testShuffledBoard() {
@@ -44,10 +40,9 @@ class Snap_KataTests: XCTestCase {
   func testCardsAreRemovedOnceDealt() {
     snap?.startGame()
     
-    _ = snap?.dealCard()
-    XCTAssertEqual(snap?.gameCards.count, 51)
-    _ = snap?.dealCard()
     XCTAssertEqual(snap?.gameCards.count, 50)
+    _ = snap?.dealCard()
+    XCTAssertEqual(snap?.gameCards.count, 49)
   }
   
   func testNoMoreCardsAreDealtWhenDeckIsEmpty() {
@@ -62,6 +57,25 @@ class Snap_KataTests: XCTestCase {
     snap?.startGame()
     let gameStatus = fakeGameStatusOutputter?.gameStatues.first
     XCTAssertTrue((gameStatus?.contains("Player 1 draws"))!)
+  }
+  
+  func testSecondPlayerFollowsFirst() {
+    snap?.startGame()
+    let gameStatus = fakeGameStatusOutputter?.gameStatues[0]
+    XCTAssertTrue((gameStatus?.contains("Player 1 draws"))!)
+    
+    let gameStatus2 = fakeGameStatusOutputter?.gameStatues[1]
+    XCTAssertTrue((gameStatus2?.contains("Player 2 draws"))!)
+  }
+  
+  func testPlayerDealtCardAtStartOfGame() {
+    snap?.startGame()
+    let gameStatus = fakeGameStatusOutputter?.gameStatues[0]
+    let gameStatusCard = gameStatus?.components(separatedBy: "Player 1 draws ")[1]
+    let allCards = Deck().fullDeck()
+    
+    XCTAssertTrue(allCards.contains(gameStatusCard!))
+
   }
   
   /*

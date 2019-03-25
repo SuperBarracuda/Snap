@@ -6,11 +6,12 @@ class Snap {
   
   required init(gameOutput: GameStatusOutputter) {
     self.gameStatus = gameOutput
+    self.gameCards = shuffledCards()
   }
   
   func startGame() {
-    self.gameCards = shuffledCards()
-    gameStatus?.printStatus("Player 1 draws")
+    gameStatus?.printStatus("Player 1 draws " + dealCard())
+    gameStatus?.printStatus("Player 2 draws")
   }
   
   func shuffledCards() -> [String] {
