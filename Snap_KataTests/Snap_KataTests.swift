@@ -4,15 +4,22 @@ import XCTest
 
 class FakeGameStatusOutputter : GameStatusOutputter {
   
+  var gameStatues : [String] = [String]()
+  
+  override func printStatus(_ status: String) {
+    gameStatues.append(status)
+  }
+  
 }
 
 class Snap_KataTests: XCTestCase {
   
   var snap : Snap?
-  var gameStatusOutputter : FakeGameStatusOutputter?
+  var fakeGameStatusOutputter : FakeGameStatusOutputter?
   
   override func setUp() {
-    snap = Snap(gameOutput: FakeGameStatusOutputter())
+    fakeGameStatusOutputter = FakeGameStatusOutputter()
+    snap = Snap(gameOutput: fakeGameStatusOutputter!)
   }
 
   func testCreateSnapGame() {
@@ -52,10 +59,9 @@ class Snap_KataTests: XCTestCase {
   }
   
   func testFirstPlayerStarts() {
-    //Given
     snap?.startGame()
-    
-    
+    let gameStatus = fakeGameStatusOutputter?.gameStatues.first
+    XCTAssertTrue((gameStatus?.contains("Player 1 draws"))!)
   }
   
   /*

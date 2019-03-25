@@ -10,6 +10,7 @@ class Snap {
   
   func startGame() {
     self.gameCards = shuffledCards()
+    gameStatus?.printStatus("Player 1 draws")
   }
   
   func shuffledCards() -> [String] {
