@@ -14,7 +14,13 @@ class Snap {
   
   func startGame() {
     player1Turn()
-    gameStatus?.printStatus("Player 2 draws")
+    player2Turn()
+  }
+  
+  func player2Turn() {
+    let dealtCard = dealCard()
+    gameEngine?.player2Cards?.append(dealtCard)
+    gameStatus?.printStatus("Player 2 draws " + dealtCard)
   }
   
   func player1Turn() {
