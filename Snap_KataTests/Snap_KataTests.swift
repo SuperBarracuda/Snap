@@ -74,6 +74,14 @@ class Snap_KataTests: XCTestCase {
     XCTAssertTrue(allCards.contains(gameStatusCard!))
   }
   
+  func testGameOver() {
+    //Given
+      //Cards match
+    //When
+    
+    //Then
+  }
+  
   /*
    //Throw error when no more cards
    
