@@ -32,11 +32,6 @@ class ViewController: NSViewController {
     snapGame = Snap(gameOutput: gameOutputter!)
     snapGame?.startGame()
   }
-
-  override var representedObject: Any? {
-    didSet {
-    }
-  }
   
   override func awakeFromNib() {
     super.awakeFromNib()
