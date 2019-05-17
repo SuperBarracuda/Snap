@@ -61,11 +61,9 @@ class Snap_KataTests: XCTestCase {
     XCTAssertTrue((gameStatus?.contains("Player 1 draws"))!)
     XCTAssertEqual(snap?.gameEngine?.player1Cards?.count, 1)
 
-    
     let gameStatus2 = fakeGameStatusOutputter?.gameStatues[1]
     XCTAssertTrue((gameStatus2?.contains("Player 2 draws"))!)
     XCTAssertEqual(snap?.gameEngine?.player2Cards?.count, 1)
-
   }
   
   func testPlayerDealtCardAtStartOfGame() {
